@@ -43,7 +43,7 @@ public class Magnitude {
 
   @Override
   public String toString() {
-    return " " + value + unit + "\n";
+    return " " + value + " " + unit + "\n";
   }
 
   public void setType(String type) {

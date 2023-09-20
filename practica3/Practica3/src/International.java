@@ -1,12 +1,9 @@
 public class International extends MeasuringSystem {
 
-  public International() {
-    super();
-  }
-
   public International(String mass, String length, String time) {
     super(mass, length, time);
   }
+  public International(){}
 
   @Override
   public Magnitude normalize(Magnitude m) {

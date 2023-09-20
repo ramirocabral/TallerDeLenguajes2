@@ -1,10 +1,9 @@
 public class English extends MeasuringSystem {
 
-  public English() {}
-
   public English(String mass, String length, String time) {
     super(mass, length, time);
   }
+  public English(){}
 
   @Override
   public Magnitude normalize(Magnitude m) {

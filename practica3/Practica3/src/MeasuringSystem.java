@@ -3,6 +3,14 @@ public abstract class MeasuringSystem {
   private String length;
   private String time;
 
+  public MeasuringSystem(String mass, String length, String time) {
+    this.mass = mass;
+    this.length = length;
+    this.time = time;
+  }
+
+  public MeasuringSystem(){}
+
   public String getMass() {
     return mass;
   }
@@ -27,12 +35,20 @@ public abstract class MeasuringSystem {
     this.mass = mass;
   }
 
-  public MeasuringSystem() {}
+  @Override
+  public String toString() {
+    return "MeasuringSystem{" +
+            "mass='" + mass + '\'' +
+            ", length='" + length + '\'' +
+            ", time='" + time + '\'' +
+            '}';
+  }
 
-  public MeasuringSystem(String mass, String length, String time) {
-    this.mass = mass;
-    this.length = length;
-    this.time = time;
+
+  public boolean equals(MeasuringSystem other) {
+      return this.mass.equals(other.getMass())
+          && this.length.equals(other.getLength())
+          && this.time.equals(other.getTime());
   }
 
   public abstract Magnitude newMagnitude(double value, String unit, String type);
